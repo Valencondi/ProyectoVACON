@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VACON | Catálogo profesional</title>
+    <meta
+      name="description"
+      content="Catálogo online de VACON con productos, carrito y opciones de pago."
+    >
+    <link rel="icon" href="VACON LOGO.png">
+    <link rel="stylesheet" href="styles.css?v=header-nav-right-1">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#catalogo" aria-label="Ir al catálogo de VACON">
+        <img src="assets/brand/vacon-logo-header.png" alt="VACON">
+      </a>
+      <nav class="top-nav" aria-label="Navegación principal">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#pagos">Pagos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="cart-button" type="button" data-cart-toggle aria-label="Abrir carrito">
+        <span class="cart-icon" aria-hidden="true">▣</span>
+        <span>Carrito</span>
+        <strong data-cart-count>0</strong>
+      </button>
+    </header>
+
+    <main>
+      <section class="catalog-shell" id="catalogo">
+        <div class="catalog-intro">
+          <p class="eyebrow">Catálogo VACON</p>
+          <h1>Productos listos para consultar, cotizar y pagar online.</h1>
+          <p>
+            Equipos para control horario, registro biométrico y estacionamientos, con
+            atención comercial directa para coordinar compra, instalación y pago.
+          </p>
+        </div>
+
+        <div class="toolbar" aria-label="Herramientas del catálogo">
+          <label class="search-field">
+            <span>Buscar</span>
+            <input type="search" data-search placeholder="Nombre, código o detalle">
+          </label>
+          <div class="category-tabs" data-categories aria-label="Categorías"></div>
+          <label class="sort-field">
+            <span>Orden</span>
+            <select data-sort>
+              <option value="featured">Destacados</option>
+              <option value="price-asc">Menor precio</option>
+              <option value="price-desc">Mayor precio</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="catalog-layout">
+          <section class="products" data-products aria-live="polite"></section>
+
+          <aside class="cart-panel" data-cart-panel aria-label="Resumen del pedido">
+            <div class="cart-heading">
+              <div>
+                <p class="eyebrow">Pedido</p>
+                <h2>Carrito</h2>
+              </div>
+              <button class="icon-button close-cart" type="button" data-cart-close aria-label="Cerrar carrito">×</button>
+            </div>
+            <div class="cart-items" data-cart-items></div>
+            <div class="cart-empty" data-cart-empty>
+              Todavía no agregaste productos. Elegí una opción del catálogo para armar el pedido.
+            </div>
+            <dl class="totals">
+              <div>
+                <dt>Subtotal</dt>
+                <dd data-subtotal>$0</dd>
+              </div>
+              <div>
+                <dt>Envío</dt>
+                <dd data-shipping>A coordinar</dd>
+              </div>
+              <div class="grand-total">
+                <dt>Total estimado</dt>
+                <dd data-total>$0</dd>
+              </div>
+            </dl>
+            <button class="primary-action" type="button" data-checkout>
+              Continuar al pago
+            </button>
+          </aside>
+        </div>
+      </section>
+
+      <section class="payment-band" id="pagos">
+        <div>
+          <p class="eyebrow">Checkout</p>
+          <h2>Pagos preparados para producción</h2>
+        </div>
+        <div class="payment-grid">
+          <article>
+            <h3>Mercado Pago</h3>
+            <p>Pagos con tarjeta, débito o dinero en cuenta cuando el pedido queda confirmado.</p>
+          </article>
+          <article>
+            <h3>Transferencia</h3>
+            <p>Coordinación directa para operaciones comerciales, señas o pagos bancarios.</p>
+          </article>
+          <article>
+            <h3>Link de pago</h3>
+            <p>Opción práctica para presupuestos, compras especiales y clientes frecuentes.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-band" id="contacto">
+        <div>
+          <p class="eyebrow">VACON</p>
+          <h2>Atención comercial directa</h2>
+          <p>Consultas, disponibilidad, envíos y presupuestos con respuesta personalizada.</p>
+        </div>
+        <a class="secondary-action" data-whatsapp-link href="#" target="_blank" rel="noreferrer">
+          Consultar por WhatsApp
+        </a>
+      </section>
+    </main>
+
+    <div class="modal" data-modal hidden>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+        <button class="icon-button modal-close" type="button" data-modal-close aria-label="Cerrar">×</button>
+        <p class="eyebrow">Pago</p>
+        <h2 id="checkout-title">Confirmar pedido</h2>
+        <p data-checkout-copy>
+          Revisá el pedido y elegí cómo querés avanzar con el pago.
+        </p>
+        <div class="checkout-actions">
+          <a class="primary-action" data-payment-link href="#" target="_blank" rel="noreferrer">Pagar online</a>
+          <a class="secondary-action" data-checkout-whatsapp href="#" target="_blank" rel="noreferrer">Enviar pedido</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
