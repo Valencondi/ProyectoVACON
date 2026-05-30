@@ -7,6 +7,8 @@
   --charcoal: #22272d;
   --orange: #ff7a18;
   --orange-dark: #cf5f0d;
+  --action: #16a34a;
+  --action-dark: #0f7a37;
   --steel: #78909c;
   --green: #0f8f62;
   --shadow: 0 18px 50px rgba(24, 31, 40, 0.12);
@@ -133,7 +135,7 @@ a {
   height: 24px;
   place-items: center;
   border-radius: 999px;
-  background: var(--orange);
+  background: var(--action);
   font-size: 0.82rem;
 }
 
@@ -340,14 +342,14 @@ a {
   border: 0;
   border-radius: 6px;
   color: #fff;
-  background: var(--orange);
+  background: var(--action);
   cursor: pointer;
   font-weight: 900;
 }
 
 .add-button:hover,
 .primary-action:hover {
-  background: var(--orange-dark);
+  background: var(--action-dark);
 }
 
 .cart-panel {
@@ -474,7 +476,7 @@ a {
 
 .primary-action {
   color: #fff;
-  background: var(--orange);
+  background: var(--action);
 }
 
 .secondary-action {
